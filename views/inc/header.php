@@ -10,10 +10,11 @@
 <body>
     <nav>
         <div>
-            <h1>Parions Tennis</h1>
+            <h1 class="logo">Parions Tennis</h1>
             <ul>
-                <li><a href="../index.php">Accueil</a></li>
-                <li><a href="../controllers/listeParis.php">Liste</a></li>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./controllers/listeParis.php">Liste</a></li>
+                <li><a href="./controllers/connexion.php">Connexion</a></li>
             </ul>
         </div>
     </nav>
