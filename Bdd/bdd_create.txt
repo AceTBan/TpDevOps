@@ -19,7 +19,7 @@ classementJoueur int not null
 
 create table matchs(
 idMatchs int primary key auto_increment, 
-dateMatchs date,
+dateMatchs datetime,
 lieuMatchs varchar(50) not null
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
