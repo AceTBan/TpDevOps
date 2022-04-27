@@ -23,8 +23,7 @@ while($donnees = $allMatchs->fetch()){
 
     echo $dateMatchs, '<br>';
     echo $lieuMatchs, '<br>';
-    echo $nomJoueur , '<br>';
-    echo $prenomJoueur, '<br>';
+    echo $nomJoueur , " " , $prenomJoueur , '<br>';
 
     // echo $nomjoueur1, '<br>';
     // echo $listeJoueur[0][0], " " , $listeJoueur[0][1];  
