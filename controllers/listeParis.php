@@ -3,9 +3,9 @@ include('../models/matchs.php');
 include('../config/bdd.php');
 include('../views/listeView.php');
 
-$animaux = new Matchs();
+$matchs = new Matchs();
 
-$animaux->readAllJoueur();
+$matchs->readAllJoueur();
 
 $allMatchs = $matchs->readAllJoueur();
 
