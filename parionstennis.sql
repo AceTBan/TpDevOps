@@ -35,9 +35,11 @@ mise int not null
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table jouer(
-idJoueur int,
+idJoueur1 int,
 idMatchs int,
-primary key (idJoueur, idMatchs),
-FOREIGN KEY (idJoueur) REFERENCES joueur(idJoueur),
+idJoueur2 int, 
+primary key (idJoueur1, idMatchs, idJoueur2),
+FOREIGN KEY (idJoueur1) REFERENCES joueur(idJoueur),
+FOREIGN KEY (idJoueur2) REFERENCES joueur(idJoueur),
 FOREIGN KEY (idMatchs) REFERENCES matchs(idMatchs)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -22,7 +22,7 @@
                     echo '<a href="./views/inscription.php" class="w3-bar-item w3-button">Inscription</a>
                         <a href="./views/connexion.php" class="w3-bar-item w3-button">Connexion</a>';}
                     else{
-                    echo '<a href="../views/profil.php" class="w3-bar-item w3-button">Profil</a>
+                    echo '<a href="./views/profil.php" class="w3-bar-item w3-button">Profil</a>
                         <a href="./controllers/deconnect.php" class="w3-bar-item w3-button">Déconnexion</a>';}?>
         </div>
     </div>
@@ -35,6 +35,7 @@
         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>PT</b></span> <span class="w3-hide-small w3-text-light-grey">Parions Tennis</span></h1>
     </div>
     </header>
+    
 
     <!-- Page content -->
     <div class="w3-content w3-padding" style="max-width:1564px">
@@ -46,28 +47,28 @@
 
         <div class="w3-row-padding">
             <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">Roland Garros</div>
-                <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
-            </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">Wimbledon</div>
-                <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
-            </div>
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Roland Garros</div>
+                    <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
+                </div>
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">US Open</div>
-                <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
-            </div>
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Wimbledon</div>
+                    <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
+                </div>
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">Open Australie</div>
-                <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">US Open</div>
+                    <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
+                </div>
             </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Open Australie</div>
+                    <img src="./img/valentin-balan-k0aVMMZwqtU-unsplash.jpg" alt="cour" style="width:100%">
+                </div>
             </div>
         </div>
 

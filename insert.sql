@@ -20,14 +20,9 @@ INSERT INTO `matchs` (`idMatchs`, `dateMatchs`, `lieuMatchs`) VALUES
 (NULL, '2022-06-10 18:30:00.000000', 'Open Australie'),
 (NULL, '2022-06-29 21:30:00.000000', 'Roland Garros');
 
-INSERT INTO `jouer` (`idJoueur`, `idMatchs`) VALUES 
-('7', '1'),
-('3', '1'),
-('2', '2'),
-('5', '2'),
-('1', '3'),
-('4', '3'),
-('6', '4'),
-('10', '4'),
-('11', '5'),
-('9', '5');
+INSERT INTO jouer (idJoueur1, idMatchs, idJoueur2) VALUES 
+('7', '1', '3'),
+('2', '2', '5'),
+('1', '3', '4'),
+('6', '4', '10'),
+('11', '5', '9');

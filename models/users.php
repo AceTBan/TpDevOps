@@ -77,6 +77,15 @@ class Users{
             return $stmt;
         }
 
+        public function readSingle(){
+            $myQuery = 'SELECT * FROM users WHERE nom=:nom';
+            $stmt = $this->connect->prepare($myQuery);
+            $stmt->bindParam(':nom', $this->nom);
+            $stmt->execute();
+            return $stmt;
+        }
+    
+
         public function createUser(){
             $myQuery = 'INSERT INTO users 
                         SET 
@@ -112,7 +121,7 @@ class Users{
         }
     
         public function deleteUser(){
-            $myQuery = 'DELETE FROM matchs
+            $myQuery = 'DELETE FROM users
                 WHERE 
                     idUsers = :idUsers';
             $stmt = $this->connect->prepare($myQuery);

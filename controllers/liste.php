@@ -4,40 +4,36 @@ include('../config/bdd.php');
 include('../views/listeMatchs.php');
 
 $matchs = new Matchs();
-$allMatchs = $matchs->readMatchs();
+$allMatchs = $matchs->readMatchsU();
 
-$auto = 0 ;
-$matchsArray = [];
+$nomJoueur = null;
+
 while($donnees = $allMatchs->fetch()){
-
-    if($auto ==0){
-        $dateMatchs = $donnees['dateMatchs'];
-        $lieuMatchs = $donnees['lieuMatchs'];
-        $nomJoueur = $donnees['nomJoueur'];
-        $prenomJoueur = $donnees['prenomJoueur'];
-        $auto += 1 ;
+    echo '<div class="w3-content" style="max-width:1564px">';
+    if($nomJoueur==null){
+    $dateMatchs = $donnees['dateMatchs'];
+    $lieuMatchs = $donnees['lieuMatchs'];
+    $nomJoueur = $donnees['nomJoueur'];
+    $prenomJoueur = $donnees['prenomJoueur'];
+    echo $dateMatchs, '<br>';
+    echo $lieuMatchs, '<br>';
+    echo $prenomJoueur, ' ', $nomJoueur ,'<br>';
+    echo '<form id="form_text" action="../controllers/parier.php" method="POST">
+    <input type="text" name="mise" placeholder="Montant" id="mise" required>
+    <button type="submit" value="Valider">Parier</button>
+    </form>';
     }
-    else if ($auto == 1){
+    else if ($nomJoueur!=null){
         $nomJoueur2 = $donnees['nomJoueur'];
         $prenomJoueur2 = $donnees['prenomJoueur'];
+        echo $prenomJoueur2, ' ', $nomJoueur2 ,'<br>';
+        $nomJoueur = null;
+        echo '<form id="form_text" action="../controllers/parier.php" method="POST">
+        <input type="text" name="mise" placeholder="Montant" id="mise" required>
+        <button type="submit" value="Valider">Parier</button>
+        </form>';
+        echo '<br>';
+        echo '</div>'; 
     }
-
-    $matchsArray = [
-        'dateMatchs' => $dateMatchs,
-        'lieuMatchs' => $lieuMatchs,
-        'nomJoueur' => $nomJoueur,
-        'prenomJoueur' => $prenomJoueur,
-        'nomJoueur2' => $nomJoueur2,
-        'prenomJoueur2' => $prenomJoueur2
-    ];
-
-    array_push($matchsArray, $matchsArray);
-    $auto = $auto%1;
-
-    echo $matchsArray[0]['dateMatchs'], '<br>';
-    echo $matchsArray[0]['lieuMatchs'], '<br>';
-    echo $matchsArray[0]['prenomJoueur'], ' ', $matchsArray[0]['nomJoueur'] ,'<br>';
-    echo $matchsArray[0]['prenomJoueur2'], ' ', $matchsArray[0]['nomJoueur2'] ,'<br>';
-    echo '<br>';
 }
 ?>
