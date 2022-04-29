@@ -29,7 +29,7 @@
                     <label for="mdp">Mot de passe ?</label>
                     <input type="text" name="mdp" placeholder="Mot de passe" id="mdp" required>
                     <button type="submit" value="Valider">Inscription</button>
-                    <a href= href="../views/connexion.php">Déjà un compte ?</a>
+                    <a href="../views/connexion.php">Déjà un compte ?</a>
                 </form>
             </div>
         </div>  
