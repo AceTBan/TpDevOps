@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e7cbb2;
+}
+
+h1{
+    text-align: center;
+    color: #cd701c;
+    font-size: clamp(50px, 9vw, 80px);
+}
+
+h2{
+    text-align: center;
+    color: #cd701c;
+
+}
